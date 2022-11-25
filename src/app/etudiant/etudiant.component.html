@@ -1,0 +1,31 @@
+<p></p>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="card-body">
+        <div>
+          <h3>infos: </h3>
+          <ul class="list-group">
+            <li class="list-group-item">Nom: <strong>{{info.name}}</strong></li>
+            <li class="list-group-item">Mail: <strong>{{info.mail}}</strong></li>
+            <li class="list-group-item">Code Permanent: <strong>{{info.code}}</strong></li>
+            <li class="list-group-item">Telephone: <strong>{{info.tel}}</strong></li>
+          </ul>
+          <div>
+            <div class="form-control">
+              <label class="form-label">Votre niveau : </label>
+              <input type="text" [(ngModel)]="niveau.message">
+              <button [disabled]="!niveau.message" class="btn btn-primary" (click)="onAddNiveau()">Ajouter</button>
+            </div>
+          </div>
+          <h3>Classe: </h3>
+          <ul class="list-group">
+            <li  *ngFor="let c of classe" class="list-group-item">
+              {{c.message}},
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
